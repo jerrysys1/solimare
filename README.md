@@ -1,3 +1,5 @@
+Technical documentation available also on https://solimare.gitbook.io/solimare
+
 Introduction
 Solimare is a Real-World Asset (RWA) platform built on Solana, enabling:
 
@@ -15,44 +17,32 @@ The platform bridges traditional boat ownership with Web3, allowing users to:
 
 Key Features
 
-
-
 Feature
 Description
-
-
 
 Boat NFT Minting
 Create NFTs representing real-world boats with metadata (registration, type, maintenance history).
 
-
 Fractional Ownership
 Split ownership into shares (e.g., 50/50, 30/30/40) with voting rights.
-
 
 Co-Ownership Vaults
 Secure on-chain vaults managing shared assets and proposals.
 
-
 Trip Management
 Plan trips, invite companions, and coordinate boat usage.
-
 
 Proposal System
 Vote on maintenance, sales, or usage rules (e.g., "Sell boat for $X").
 
-
 Real-Time Chat
 In-app messaging for trip coordination.
-
 
 Wallet Auth
 Sign-in with Solana wallets (Phantom, Solflare).
 
-
 Row-Level Security (RLS)
 Supabase RLS policies ensure data privacy.
-
 
 
 Technical Stack
