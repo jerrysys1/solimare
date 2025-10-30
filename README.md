@@ -316,7 +316,7 @@ Wallet connection errors
 NFT minting failures
 Transaction errors
 Database/RLS issues
-
+```
 
 <div align="center">
   <sub>Built with ❤️ by <a href="https://solima.re">Solimare Team</a></sub>
