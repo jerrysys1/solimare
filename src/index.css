@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 185 35% 96%;
+    --foreground: 195 25% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 195 25% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 195 25% 25%;
+
+    --primary: 185 45% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 10 75% 78%;
+    --secondary-foreground: 195 25% 25%;
+
+    --muted: 185 20% 92%;
+    --muted-foreground: 195 15% 50%;
+
+    --accent: 45 60% 88%;
+    --accent-foreground: 195 25% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 185 20% 88%;
+    --input: 185 20% 92%;
+    --ring: 185 45% 55%;
+
+    --radius: 0.75rem;
+    
+    --gradient-ocean: linear-gradient(135deg, hsl(185 45% 55%), hsl(200 50% 65%));
+    --gradient-sunset: linear-gradient(135deg, hsl(10 75% 78%), hsl(30 70% 85%));
+    --shadow-soft: 0 4px 20px -2px hsl(185 45% 55% / 0.15);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 195 35% 12%;
+    --foreground: 185 25% 90%;
+
+    --card: 195 30% 15%;
+    --card-foreground: 185 25% 90%;
+
+    --popover: 195 30% 15%;
+    --popover-foreground: 185 25% 90%;
+
+    --primary: 185 45% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 10 60% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 195 25% 20%;
+    --muted-foreground: 185 15% 60%;
+
+    --accent: 45 50% 65%;
+    --accent-foreground: 195 35% 12%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 185 25% 90%;
+
+    --border: 195 25% 25%;
+    --input: 195 25% 20%;
+    --ring: 185 45% 55%;
+    
+    --gradient-ocean: linear-gradient(135deg, hsl(185 45% 45%), hsl(200 50% 55%));
+    --gradient-sunset: linear-gradient(135deg, hsl(10 60% 60%), hsl(30 60% 70%));
+    --shadow-soft: 0 4px 20px -2px hsl(185 45% 35% / 0.3);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Pointer-events strategy to let Spline receive cursor events while UI stays clickable */
+@layer utilities {
+  .allow-pointer-pass { pointer-events: none; }
+  .allow-pointer-pass :where(a, button, [role="button"], input, select, textarea, label, .pointer-auto) { pointer-events: auto; }
+  .pointer-auto { pointer-events: auto; }
+}
